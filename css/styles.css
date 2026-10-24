@@ -1,0 +1,434 @@
+/* Include padding and borders in declared element widths. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Let form controls use the page's font. */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* A visible focus indicator on the light page background. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #0b63ce;
+    outline-offset: 3px;
+}
+
+/* Keep the skip link outside normal layout; reveal it on keyboard focus. */
+.skip-link {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1000;
+    transform: translateY(-200%);
+    padding: 0.6rem 0.9rem;
+    border: 2px solid #193b3a;
+    border-radius: 4px;
+    color: #193b3a;
+    background-color: #fff;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    margin: -1.5rem -1.5rem 2rem;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background-color: #193b3a;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
+}
+
+.nav-links a {
+    padding: 0.35rem 0;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.nav-links a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 3px solid #ffe08a;
+    outline-offset: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0.35rem;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle::before {
+    content: "\2630";
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.menu-toggle[aria-expanded="true"]::before {
+    content: "\00d7";
+}
+
+#about-me {
+    max-width: 68ch;
+    margin: 0 auto 2.5rem;
+}
+
+#about-me h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.75rem;
+}
+
+#about-me p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 0.75rem 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#skills li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#skills li::before {
+    content: "\2713";
+    flex: 0 0 1rem;
+    color: #193b3a;
+    font-weight: 700;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0 auto 2.5rem;
+}
+
+#projects > h2 {
+    flex-basis: 100%;
+    margin: 0;
+}
+
+.project-filter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.project-filter select {
+    max-width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #aab5bd;
+    border-radius: 4px;
+    color: inherit;
+    background-color: #fff;
+    font: inherit;
+}
+
+.project-filter select:focus-visible {
+    outline: 3px solid #0b63ce;
+    outline-offset: 2px;
+}
+
+#projects > article {
+    flex: 1 1 18rem;
+    min-width: 0;
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid #d6dde2;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+/* Protect filtering if card display rules are added later. */
+#projects > article[hidden] {
+    display: none;
+}
+
+#contact form {
+    display: grid;
+    gap: 1rem;
+    max-width: 40rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+#contact input,
+#contact textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid #697b87;
+    border-radius: 4px;
+    color: inherit;
+    background-color: #fff;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button[type="submit"] {
+    justify-self: start;
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid #193b3a;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #193b3a;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#contact button[type="submit"]:hover:not(:disabled) {
+    background-color: #102b2a;
+}
+
+#contact button[type="submit"]:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+#contact-status {
+    margin: 0;
+}
+
+.field-error {
+    display: block;
+    margin-top: 0.25rem;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+/* Keep the live region in the document even when its message is empty. */
+.field-error:empty {
+    margin-top: 0;
+}
+
+#contact input[aria-invalid="true"],
+#contact textarea[aria-invalid="true"] {
+    border-color: #b42318;
+}
+
+#home,
+#skills,
+#contact {
+    margin-bottom: 2.5rem;
+}
+
+#projects figure {
+    margin: 0;
+}
+
+.lightbox-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.lightbox-trigger img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.lightbox-trigger:focus-visible {
+    outline: 3px solid #0b63ce;
+    outline-offset: 3px;
+}
+
+/* Use the same high-contrast focus color as the dark navigation. */
+.lightbox-close:focus-visible {
+    outline: 3px solid #ffe08a;
+    outline-offset: 3px;
+}
+
+.lightbox {
+    width: calc(100vw - 2rem);
+    max-width: 60rem;
+    max-height: 90vh;
+    padding: 1rem;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #193b3a;
+}
+
+.lightbox::backdrop {
+    background-color: rgb(0 0 0 / 80%);
+}
+
+.lightbox figure {
+    margin: 0;
+}
+
+.lightbox img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 75vh;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.lightbox figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.lightbox-close {
+    display: block;
+    margin: 0 0 0.75rem auto;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+@media (max-width: 40rem) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        margin: -1rem -1rem 1.5rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 0.5rem 1rem;
+    }
+
+    #projects {
+        gap: 1rem;
+    }
+
+    #projects > article {
+        flex-basis: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.menu-enhanced {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    header nav.menu-enhanced .menu-toggle {
+        display: inline-flex;
+    }
+
+    header nav.menu-enhanced .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.25rem;
+    }
+
+    header nav.menu-enhanced.is-open .nav-links {
+        display: flex;
+    }
+
+    header nav.menu-enhanced .nav-links a {
+        padding: 0.5rem 0;
+    }
+}
+
+@media (min-width: 64rem) {
+    main {
+        max-width: 72rem;
+        margin-inline: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

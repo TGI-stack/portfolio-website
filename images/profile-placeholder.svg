@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="description">An abstract portrait silhouette with a prompt to add a personal photo.</desc>
+  <rect width="800" height="600" fill="#dce7e5" />
+  <circle cx="400" cy="220" r="100" fill="#7c9a96" />
+  <path d="M205 560c14-128 91-205 195-205s181 77 195 205" fill="#193b3a" />
+  <rect x="235" y="500" width="330" height="42" rx="8" fill="#fff" />
+  <text x="400" y="528" fill="#193b3a" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle">Replace with your photo</text>
+</svg>

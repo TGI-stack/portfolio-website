@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title description">
+  <title id="title">Calculator project preview</title>
+  <desc id="description">An illustrated calculator interface with a result display and number buttons.</desc>
+  <rect width="800" height="500" fill="#e6efed" />
+  <rect x="250" y="35" width="300" height="430" rx="22" fill="#193b3a" />
+  <rect x="275" y="70" width="250" height="95" rx="10" fill="#f5f7fa" />
+  <text x="500" y="135" fill="#1f2933" font-family="system-ui, sans-serif" font-size="42" text-anchor="end">128</text>
+  <g fill="#fff">
+    <rect x="275" y="190" width="55" height="55" rx="10" />
+    <rect x="340" y="190" width="55" height="55" rx="10" />
+    <rect x="405" y="190" width="55" height="55" rx="10" />
+    <rect x="470" y="190" width="55" height="55" rx="10" />
+    <rect x="275" y="255" width="55" height="55" rx="10" />
+    <rect x="340" y="255" width="55" height="55" rx="10" />
+    <rect x="405" y="255" width="55" height="55" rx="10" />
+    <rect x="470" y="255" width="55" height="55" rx="10" />
+    <rect x="275" y="320" width="55" height="55" rx="10" />
+    <rect x="340" y="320" width="55" height="55" rx="10" />
+    <rect x="405" y="320" width="55" height="55" rx="10" />
+    <rect x="470" y="320" width="55" height="55" rx="10" />
+  </g>
+  <rect x="275" y="385" width="185" height="55" rx="10" fill="#f4b183" />
+  <rect x="470" y="385" width="55" height="55" rx="10" fill="#f4b183" />
+</svg>

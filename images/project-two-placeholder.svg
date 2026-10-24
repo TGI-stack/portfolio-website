@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title description">
+  <title id="title">Project preview placeholder</title>
+  <desc id="description">A browser window mockup marked for replacement with a Project Two screenshot.</desc>
+  <rect width="800" height="500" fill="#e6efed" />
+  <rect x="95" y="65" width="610" height="370" rx="14" fill="#fff" stroke="#193b3a" stroke-width="8" />
+  <path d="M99 122h602" stroke="#193b3a" stroke-width="8" />
+  <circle cx="130" cy="94" r="9" fill="#f4b183" />
+  <circle cx="160" cy="94" r="9" fill="#dce7e5" />
+  <circle cx="190" cy="94" r="9" fill="#7c9a96" />
+  <rect x="140" y="160" width="230" height="190" rx="10" fill="#dce7e5" />
+  <rect x="405" y="165" width="235" height="24" rx="8" fill="#193b3a" />
+  <rect x="405" y="210" width="200" height="14" rx="7" fill="#aab5bd" />
+  <rect x="405" y="240" width="220" height="14" rx="7" fill="#aab5bd" />
+  <rect x="405" y="285" width="130" height="42" rx="8" fill="#f4b183" />
+  <text x="400" y="395" fill="#193b3a" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">Add a Project Two screenshot</text>
+</svg>
